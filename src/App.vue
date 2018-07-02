@@ -1,6 +1,6 @@
 <template>
-  <div id="app">
-    <h1>Todo app</h1>
+  <div id="app" class="container">
+    <title-header />
     <input-field @itemSubmited="addItem"/>
     <items-list :items="items" @removeItem="removeItem"
     />
@@ -10,12 +10,14 @@
 <script>
 import InputField from "./components/input-field";
 import ItemsList from "./components/items-list";
+import TitleHeader from './components/title-header';
 
 export default {
   name: "App",
   components: {
     InputField,
-    ItemsList
+    ItemsList,
+    TitleHeader
   },
   data() {
     return {

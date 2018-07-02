@@ -1,12 +1,12 @@
 <template>
-  <div :class="inputStatus">
-    <div>
-      <label>Title</label>
-      <input v-model="title" @keyup.enter.prevent="titleSubmited">
+  <div :class="inputStatus" class="box">
+    <div class="field">
+      <label class="label">Title</label>
+      <input v-model="title" @keyup.enter.prevent="titleSubmited" class="input">
     </div>
-    <div>
-      <label>Description</label>
-      <input v-model="description" ref="description" @keyup.enter.prevent="todoSubmited">
+    <div class="field">
+      <label class="label">Description</label>
+      <input class="input" v-model="description" ref="description" @keyup.enter.prevent="todoSubmited">
     </div>
   </div>
 </template>

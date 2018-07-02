@@ -1,11 +1,19 @@
 <template>
   <div class="items-list">
+    <h2 class="subtitle">Tasks list</h2>
     <div v-if="hasItems">
-      <h2>Tasks list</h2>
-      <item v-for="(item, pos) in items" 
-      :key="pos" 
-      :title="item.title" :description="item.description" @removeMe="removeItem(pos)"
-      class="item"/>
+      <table class="table is-fullwidth">
+      <tbody>
+      <tr v-for="(item, pos) in items" :key="pos">
+      <th >
+        <item
+        :key="pos" 
+        :title="item.title" :description="item.description" @removeMe="removeItem(pos)"
+        class="item"/>
+        </th>
+        </tr>
+        </tbody>
+        </table>
     </div>
     <div v-else >
       <h3>Great! you don't have any task</h3>
